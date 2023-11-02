@@ -34,3 +34,13 @@
     display: none;
   }
 }
+
+@media screen and (min-width: 1200px) {
+  .secondery-header {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}

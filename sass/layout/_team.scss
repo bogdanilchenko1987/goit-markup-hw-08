@@ -1,5 +1,5 @@
 .secondery-header {
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
   text-align: center;
   font-size: 28px;
   line-height: 1.16;
@@ -78,6 +78,12 @@
 }
 
 @media screen and (max-width: 767px) {
+  //  .secondery-header {
+  //     margin-bottom: 30px;
+  //   }
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
   .team__wrapper {
     padding-left: 122px;
     padding-right: 122px;
@@ -107,8 +113,7 @@
     margin-top: 0;
   }
 
-  .team-wrapper {
-    padding-left: 32px;
-    padding-right: 32px;
+  .team-socials {
+    justify-content: center;
   }
 }

@@ -71,7 +71,6 @@ address {
 }
 
 .secondery-header {
-  margin-bottom: 50px;
   text-align: center;
   font-size: 36px;
   line-height: 1.16;
@@ -572,8 +571,16 @@ header {
     display: none;
   }
 }
+@media screen and (min-width: 1200px) {
+  .secondery-header {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+  }
+}
 .secondery-header {
-  margin-bottom: 30px;
   text-align: center;
   font-size: 28px;
   line-height: 1.16;
@@ -656,6 +663,9 @@ header {
   }
 }
 @media screen and (max-width: 767px) {
+  .team__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
   .team__wrapper {
     padding-left: 122px;
     padding-right: 122px;
@@ -687,9 +697,10 @@ header {
         flex-basis: calc((100% - 120px) / 4);
     margin-top: 0;
   }
-  .team-wrapper {
-    padding-left: 32px;
-    padding-right: 32px;
+  .team-socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .flex-container {
@@ -1389,4 +1400,23 @@ header {
 
 .checkbox__link {
   color: rgb(33, 150, 243);
+}
+
+@media screen and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    height: 609px;
+  }
+  .checkbox__label {
+    font-size: 12px;
+  }
+  .checkbox__label::before {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }/*# sourceMappingURL=main.css.map */

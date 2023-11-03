@@ -234,19 +234,13 @@ header {
             justify-content: start;
     margin-top: 64px;
   }
-  .mobile-menu-socials__link {
-    display: block;
+  .mobile-menu-socials__item {
     position: relative;
-    margin-right: 20px;
-    color: #2196f3;
-    font-family: Roboto;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.22;
-    letter-spacing: 0.36px;
   }
-  .mobile-menu-socials__link::after {
+  .mobile-menu-socials__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  .mobile-menu-socials__item:not(:last-child)::after {
     content: "";
     position: absolute;
     right: -10px;
@@ -254,6 +248,16 @@ header {
     height: 100%;
     width: 1px;
     background: rgba(33, 33, 33, 0.2);
+  }
+  .mobile-menu-socials__link {
+    display: block;
+    color: #2196f3;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22;
+    letter-spacing: 0.36px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -507,20 +511,17 @@ header {
   }
 }
 @media screen and (min-width: 768px) {
-  .flex-container {
+  .features__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    gap: 30px;
   }
   .features__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    margin-left: 30px;
-    margin-top: 30px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -539,9 +540,9 @@ header {
 
 .work__item {
   position: relative;
-  -ms-flex-preferred-size: calc((100% - 90px) / 3);
-      flex-basis: calc((100% - 90px) / 3);
-  margin-left: 30px;
+  gap: 30px;
+  -ms-flex-preferred-size: calc((100% - 60px) / 3);
+      flex-basis: calc((100% - 60px) / 3);
 }
 
 .work__wrapper {
@@ -583,6 +584,14 @@ header {
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+  }
+  .work__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .work__item {
+    margin-right: 30px;
   }
 }
 .secondery-header {
@@ -679,19 +688,20 @@ header {
 }
 @media screen and (min-width: 768px) {
   .flex-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .team__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    gap: 30px;
   }
   .team__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    margin-left: 30px;
-    margin-top: 30px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -710,16 +720,8 @@ header {
   }
 }
 .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-left: -30px;
-}
-
-.clients__item {
-  margin-left: 30px;
 }
 
 .clients__link {
@@ -757,26 +759,34 @@ header {
   }
 }
 @media screen and (max-width: 767px) {
-  .flex-container {
-    margin-top: -30px;
+  .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
   }
   .clients__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 2);
-        flex-basis: calc((100% - 60px) / 2);
-    margin-top: 30px;
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
   .clients__link {
     max-width: 210px;
   }
 }
 @media screen and (min-width: 768px) {
-  .flex-container {
-    margin-top: -30px;
+  .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
   }
   .clients__item {
-    -ms-flex-preferred-size: calc((100% - 90px) / 3);
-        flex-basis: calc((100% - 90px) / 3);
-    margin-top: 30px;
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
   }
   .clients__link {
     max-width: 226px;
@@ -913,7 +923,6 @@ header {
 
 @media screen and (max-width: 767px) {
   .footer_flex {
-    display: inline-block;
     text-align: center;
   }
   .footer-socials__list {

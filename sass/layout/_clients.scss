@@ -1,12 +1,12 @@
 .flex-container {
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
+  // margin-left: -30px;
 }
 
-.clients__item {
-  margin-left: 30px;
-}
+// .clients__item {
+//   margin-left: 30px;
+// }
 
 .clients__link {
   display: flex;
@@ -41,14 +41,24 @@
 }
 
 @media screen and (max-width: 767px) {
-  .flex-container {
-    margin-top: -30px;
+  // .flex-container {
+  //   margin-top: -30px;
+  // }
+
+  // .clients__item {
+  //   flex-basis: calc((100% - 60px) / 2);
+
+  //   margin-top: 30px;
+  // }
+
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   .clients__item {
-    flex-basis: calc((100% - 60px) / 2);
-
-    margin-top: 30px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 
   .clients__link {
@@ -57,14 +67,24 @@
 }
 
 @media screen and (min-width: 768px) {
-  .flex-container {
-    margin-top: -30px;
+  // .flex-container {
+  //   margin-top: -30px;
+  // }
+
+  // .clients__item {
+  //   flex-basis: calc((100% - 90px) / 3);
+
+  //   margin-top: 30px;
+  // }
+
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 
   .clients__item {
-    flex-basis: calc((100% - 90px) / 3);
-
-    margin-top: 30px;
+    flex-basis: calc((100% - 60px) / 3);
   }
 
   .clients__link {

@@ -4,8 +4,9 @@
 
 .work__item {
   position: relative;
-  flex-basis: calc((100% - 90px) / 3);
-  margin-left: 30px;
+  gap: 30px;
+  flex-basis: calc((100% - 60px) / 3);
+  // margin-left: 30px;
 }
 
 .work__wrapper {
@@ -42,5 +43,13 @@
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+  }
+
+  .work__list {
+    display: flex;
+  }
+
+  .work__item {
+    margin-right: 30px;
   }
 }

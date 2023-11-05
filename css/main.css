@@ -82,16 +82,10 @@ address {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .container {
-    width: 480px;
     margin-right: auto;
     margin-left: auto;
-  }
-}
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -140,22 +134,24 @@ header {
     display: none;
   }
   .mobile-menu-btn {
+    top: 10px;
+    right: 15px;
     background-color: transparent;
     border: none;
     padding: 0;
     line-height: 0;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .mobile-menu-btn .mobile-menu-btn__icon:focus, .mobile-menu-btn .mobile-menu-btn__icon:hover {
+  .mobile-menu-btn:focus, .mobile-menu-btn:hover .mobile-menu-btn__icon {
     fill: #2196f3;
-  }
-  .mobile-menu-btn {
-    top: 10px;
-    right: 15px;
   }
   .mobile-menu-btn-close {
     position: absolute;
     top: 10px;
     right: 15px;
+    -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .mobile-menu {
     position: absolute;
@@ -229,6 +225,8 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -330,6 +328,9 @@ header {
   .contacts__link:hover .contacts__logo, .contacts__link:focus .contacts__logo {
     fill: var(--btn-bg);
   }
+  .contacts__item:first-child {
+    margin-bottom: 10px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
@@ -346,6 +347,9 @@ header {
   }
   .contacts__item:not(:last-child) {
     margin-right: 40px;
+  }
+  .contacts__item:first-child {
+    margin-bottom: 0;
   }
   .contacts__link {
     display: -webkit-box;
@@ -402,7 +406,6 @@ header {
 }
 
 .hero__header {
-  width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
   color: var(--main-bg);
@@ -414,7 +417,6 @@ header {
 
 @media screen and (max-width: 767px) {
   .hero-bg {
-    max-width: 480px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-mobile.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
   }
@@ -427,7 +429,6 @@ header {
 }
 @media screen and (min-width: 768px) {
   .hero-bg {
-    max-width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-tablet.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
   }
@@ -678,12 +679,26 @@ header {
   }
 }
 @media screen and (max-width: 767px) {
+  .team__img {
+    width: 100%;
+  }
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
   .team__wrapper {
     padding-left: 122px;
     padding-right: 122px;
+  }
+  .team-socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media screen and (min-width: 768px) {
@@ -961,6 +976,7 @@ header {
   }
   .adress {
     margin-bottom: 60px;
+    text-align: center;
   }
   .footer-submit {
     width: 450px;
@@ -979,6 +995,9 @@ header {
   }
 }
 @media screen and (min-width: 1200px) {
+  .footer-header {
+    text-align: left;
+  }
   .footer_flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -989,6 +1008,12 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .footer-submit {
+    width: auto;
+  }
+  .footer-submit__input {
+    width: 358px;
   }
 }
 .filter__item:not(:last-child) {
@@ -1060,11 +1085,6 @@ header {
     margin-bottom: 50px;
   }
 }
-.examples__img {
-  width: 370px;
-  height: 294px;
-}
-
 .examples__link {
   display: block;
   color: var(--header-color);
@@ -1130,15 +1150,8 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-  .examples {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .examples__img {
+    width: 100%;
   }
   .examples__item:not(:last-child) {
     margin-bottom: 30px;
@@ -1152,9 +1165,27 @@ header {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .examples__item {
     width: 354px;
+  }
+  .examples__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .examples__wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1172,6 +1203,10 @@ header {
         flex-basis: calc((100% - 270px) / 9);
     margin-left: 30px;
     margin-top: 30px;
+  }
+  .examples__img {
+    width: 370px;
+    height: 294px;
   }
 }
 .backdrop {
@@ -1306,7 +1341,7 @@ header {
 .contact-form__textarea {
   display: block;
   width: 100%;
-  height: 120px;
+  height: 100%;
   padding: 12px 16px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -1414,10 +1449,26 @@ header {
   color: rgb(33, 150, 243);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    width: 90%;
+    height: auto;
+  }
+  .contact-form__textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 60%;
+    height: auto;
+  }
+  .contact-form__textarea {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .checkbox__label {
     font-size: 12px;
@@ -1430,5 +1481,10 @@ header {
   .modal {
     width: 528px;
     height: 581px;
+  }
+  .contact-form__textarea {
+    display: block;
+    width: 100%;
+    height: 120px;
   }
 }/*# sourceMappingURL=main.css.map */

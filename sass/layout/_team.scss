@@ -81,12 +81,23 @@
   //  .secondery-header {
   //     margin-bottom: 30px;
   //   }
+
+  .team__img {
+    width: 100%;
+  }
+
   .team__item:not(:last-child) {
     margin-bottom: 30px;
   }
   .team__wrapper {
     padding-left: 122px;
     padding-right: 122px;
+  }
+
+  .team-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

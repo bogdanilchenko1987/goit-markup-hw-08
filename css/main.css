@@ -1506,8 +1506,8 @@ header {
 @media screen and (max-width: 767px) {
   .modal {
     width: 100%;
-    -webkit-transform: translate(-50%, -50%) scale(0.93);
-            transform: translate(-50%, -50%) scale(0.93);
+    -webkit-transform: translate(-50%, -50%) scale(0.8);
+            transform: translate(-50%, -50%) scale(0.8);
   }
   .checkbox__label {
     font-size: 12px;
@@ -1522,6 +1522,14 @@ header {
   }
   .checkbox__label {
     display: block;
+  }
+  .modal {
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%) scale(0.75);
+            transform: translate(-50%, -50%) scale(0.75);
+  }
+  .modal__header {
+    font-size: 17px;
   }
 }
 @media screen and (min-width: 768px) {

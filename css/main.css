@@ -1522,6 +1522,7 @@ header {
 @media screen and (max-width: 767px) {
   .modal {
     width: 100%;
+    max-width: 450px;
     -webkit-transform: translate(-50%, -50%) scale(0.8);
             transform: translate(-50%, -50%) scale(0.8);
   }
@@ -1551,6 +1552,7 @@ header {
 @media screen and (min-width: 768px) {
   .modal {
     width: 60%;
+    max-width: 450px;
     -webkit-transform: translate(-50%, -50%) scale(0.7);
             transform: translate(-50%, -50%) scale(0.7);
   }
@@ -1567,7 +1569,7 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    min-width: 528px;
     height: 581px;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);

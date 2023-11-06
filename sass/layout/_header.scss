@@ -60,14 +60,9 @@ header {
     }
   }
 
-  // .mobile-menu-btn__icon {
-  //   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  // }
-  //   .mobile-menu-btn &:focus,
-  //   .mobile-menu-btn &:hover {
-  //     fill: #2196f3;
-  //   }
-  // }
+  .mobile-menu-btn-open {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   // .mobile-menu-btn {
   //   // position: absolute;

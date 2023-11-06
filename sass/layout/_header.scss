@@ -83,7 +83,7 @@ header {
   }
 
   .mobile-menu {
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 0;
     right: 0;
@@ -210,6 +210,34 @@ header {
     font-weight: 500;
     line-height: 1.22;
     letter-spacing: 0.36px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu-tel {
+    margin-top: 150px;
+    font-size: 23px;
+  }
+
+  .mobile-menu-email {
+    margin-top: 20px;
+    font-size: 21px;
+  }
+
+  .mobile-menu-nav__link {
+    font-size: 35px;
+  }
+
+  .mobile-menu-nav__item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  .mobile-menu-socials {
+    margin-top: 50px;
+  }
+
+  .mobile-menu-socials__link {
+    font-size: 16px;
   }
 }
 

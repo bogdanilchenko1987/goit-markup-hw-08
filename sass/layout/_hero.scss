@@ -80,6 +80,11 @@
         url(../images/hero-mobile@2x.jpg);
     }
   }
+
+  .hero__header {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
 }
 
 // 768+
@@ -103,6 +108,11 @@
         ),
         url(../images/hero-tablet@2x.jpg);
     }
+  }
+
+  .hero__header {
+    margin-right: 204px;
+    margin-left: 204px;
   }
 }
 
@@ -136,7 +146,7 @@
   }
 
   .hero__header {
-    width: 696px;
+    // width: 696px;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;

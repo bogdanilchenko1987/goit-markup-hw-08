@@ -84,4 +84,8 @@
     flex-basis: calc((100% - 120px) / 4);
     margin-top: 0;
   }
+
+  .features__list {
+    justify-content: space-between;
+  }
 }

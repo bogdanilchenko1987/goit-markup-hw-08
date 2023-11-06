@@ -189,14 +189,31 @@
   .footer_flex {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: start;
+  }
+
+  .adress,
+  .footer-socials {
+    margin-right: 93px;
+  }
+
+  .adress {
+    text-align: left;
+    margin-bottom: 0;
   }
 
   .footer-submit {
-    width: auto;
+    width: 570px;
   }
 
   .footer-submit__input {
     width: 358px;
+    margin-bottom: 0;
+  }
+
+  .footer-submit__btn {
+    display: inline;
+    margin-left: 8px;
+    line-height: 0;
   }
 }

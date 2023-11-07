@@ -228,11 +228,26 @@ header {
   }
 
   .mobile-menu-socials {
-    margin-top: 50px;
+    flex-wrap: nowrap;
+    margin-top: 45px;
+  }
+
+  .mobile-menu-socials__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:not(:last-child)::after {
+      right: -5px;
+    }
   }
 
   .mobile-menu-socials__link {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  .mobile-menu {
+    overflow: hidden;
   }
 }
 
